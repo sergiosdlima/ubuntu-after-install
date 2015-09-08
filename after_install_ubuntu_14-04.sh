@@ -13,7 +13,7 @@ sudo apt-get update &&
 echo "##########################################################" &&
 echo "## Instalando coisas básicas, como vim, curl, git e etc ##" &&
 echo "##########################################################" &&
-sudo apt-get install -y vim curl git htop python-software-properties
+sudo apt-get install -y vim curl git htop python-software-properties software-properties-common
 echo "###########################" &&
 echo "## Instalando terminator ##" &&
 echo "###########################" &&
@@ -70,6 +70,14 @@ echo "############################################" &&
 echo "## Adicionando o repositório trusty-media ##" &&
 echo "############################################" &&
 sudo add-apt-repository -y ppa:mc3man/trusty-media
+echo "##############################################" &&
+echo "## Adicionando o repositório Sublime Text 3 ##" &&
+echo "##############################################" &&
+sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
+echo "#######################################" &&
+echo "## Adicionando o repositório ansible ##" &&
+echo "#######################################" &&
+sudo apt-add-repository -y ppa:ansible/ansible &&
 echo "######################" &&
 echo "## Obtendo pacotes ##" &&
 echo "#####################" &&
@@ -83,6 +91,18 @@ echo "## Instalando Oracle JDP/JRE 8 ##" &&
 echo "#################################" &&
 sudo apt-get install -y oracle-java8-installer
 sudo apt-get install -y oracle-java8-set-default
+echo "###############################" &&
+echo "## Instalando Sublime Text 3 ##" &&
+echo "###############################" &&
+sudo apt-get install -y sublime-text-installer
+echo "#######################" &&
+echo "## Instalando Docker ##" &&
+echo "#######################" &&
+wget -qO- https://get.docker.com/ | sh
+echo "########################" &&
+echo "## Instalando Ansible ##" &&
+echo "########################" &&
+sudo apt-get install -y ansible
 echo "###########################" &&
 echo "## Instalando VLC player ##" &&
 echo "###########################" &&
